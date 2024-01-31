@@ -1,0 +1,16 @@
+{
+  "appbartitle":"News",
+  "intro": "Pick your category of interest",
+  "drawetitle": "News App!",
+  "categories":"Categories",
+  "settings": "Settings",
+  "language": "Language",
+  "english": "English",
+  "arabic": "العربية",
+  "sports": "Sports",
+  "politics":"Politics",
+  "health": "Health",
+  "business":"Business",
+  "environment": "Environment",
+  "science":"Science"
+}

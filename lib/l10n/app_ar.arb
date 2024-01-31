@@ -1,0 +1,16 @@
+{
+  "appbartitle":"News",
+  "intro": "اختر فئة الخبر",
+  "drawetitle": "News App!",
+  "categories":"الفئات",
+  "settings": "الاعدادات",
+  "language": "اللغة",
+  "english": "English",
+  "arabic": "العربية",
+  "sports": "الرياضة",
+  "politics":"السياسة",
+  "health": "الصحة",
+  "business":"الاقتصاد",
+  "environment": "البيئة",
+  "science":"العلوم"
+}
