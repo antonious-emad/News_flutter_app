@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:fourth/provider/my_provider.dart';
 import 'package:fourth/shared/styles/colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 class SettingsTab extends StatelessWidget {
   static const String routeName="SettingsTab";
   bool language=false;
   @override
   Widget build(BuildContext context) {
+    MyProvider provider= Provider.of<MyProvider>(context);
     showLanguageBottomSheet( context) {
       showModalBottomSheet(
         backgroundColor:Theme.of(context).colorScheme.onPrimary,
@@ -23,25 +26,25 @@ class SettingsTab extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 InkWell(onTap: () {
-                  // provider.ChangeLanguage("en");
+                  provider.changeLanguage("en");
                 },child: Row(
                   children: [
                     language==false?Text(AppLocalizations.of(context)!.english,style: Theme.of(context).textTheme.bodyMedium):Text(AppLocalizations.of(context)!.english,style: TextStyle(  color:Colors.black54)  ),
                     Spacer(),
-                    language==false?Icon(Icons.done,color: blacked,size: 35,):SizedBox.shrink(),
+                    provider.Language=="en"?Icon(Icons.done,color: appbarcolor,size: 35,):SizedBox.shrink(),
                   ],
                 )),
                 SizedBox(height: 25,),
                 InkWell(onTap: () {
                   language=true;
-                  // provider.ChangeLanguage("ar");
-                  // AppLocalizations.of(context)!.localeName=Locale("en");
+                  provider.changeLanguage("ar");
+                //  AppLocalizations.of(context)!.localeName=Locale("en");
                   // setState(() {});
                 },child: Row(
                   children: [
                     language==true?Text(AppLocalizations.of(context)!.arabic,style:Theme.of(context).textTheme.bodyMedium):Text(AppLocalizations.of(context)!.arabic,style: TextStyle( color:Colors.black54)  ),
                     Spacer(),
-                    language==true?Icon(Icons.done,color:appbarcolor,size: 35,):SizedBox.shrink(),
+                    provider.Language=="ar"?Icon(Icons.done,color:appbarcolor,size: 35,):SizedBox.shrink(),
                   ],
                 )),
 
@@ -78,13 +81,7 @@ class SettingsTab extends StatelessWidget {
                           border: Border.all(color: appbarcolor)
                       ), child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: language == false ? Text(AppLocalizations.of(context)!.english,style: GoogleFonts.inter(color: appbarcolor,fontSize: 14,fontWeight:FontWeight.w400 ),) : Text(
-                        AppLocalizations.of(context)!.arabic,style:GoogleFonts.inter(color: appbarcolor,fontSize: 14,fontWeight:FontWeight.w400 ),),
-
-                    // child: AppLocalizations.of(context)!.localeName == "en" ? Text(
-                    //     AppLocalizations.of(context)!.english) : Text(
-                    //     AppLocalizations.of(context)!.arabic),
-
+                    child: provider.Language=="en"?Text(AppLocalizations.of(context)!.english,style: GoogleFonts.inter(color: appbarcolor,fontSize: 14,fontWeight:FontWeight.w400 ),) : Text(AppLocalizations.of(context)!.arabic,style:GoogleFonts.inter(color: appbarcolor,fontSize: 14,fontWeight:FontWeight.w400 ),),
                   )),
                 ),
 

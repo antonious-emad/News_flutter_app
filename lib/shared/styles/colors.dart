@@ -12,4 +12,8 @@ const Color sourcetitleNewscolor=Color(0xff79828B);
 const Color titleNewscolor=Color(0xff42505C);
 const Color timeNewsColor=Color(0xffA3A3A3);
 const Color blacked= Color(0xff303030);
+const Color primaryColor = Color(0xff7559D9);
+const Color blackColor = Color(0xFF242424);
+const Color darkPrimary = Color(0xff320140);
+const Color light = Color(0xffA2AEF2);
 

@@ -2,6 +2,9 @@ abstract class HomeStates {}
 
  class HomeInitState extends HomeStates {}
 
+class HomeChangeSourceState extends HomeStates {}
+
+
  class HomeGetSourcesLoadingState extends HomeStates {}
 
  class HomeGetSourcesSucessState extends HomeStates {}

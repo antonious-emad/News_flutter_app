@@ -30,7 +30,7 @@ class _TabControllerWidgetState extends State<TabControllerWidget> {
           tabs: widget.sourcesList.map((onesource) => Tab(child: SourceItem(onesource,selectedindex==widget.sourcesList.indexOf(onesource)) ) ).toList() ,
         ) ),
         FutureBuilder(future: ApiManager.getNews(widget.sourcesList[selectedindex].id??""), builder:
-        (context, snapshot) {
+            (context, snapshot) {
           if(snapshot.connectionState==ConnectionState.waiting){return Center(child: CircularProgressIndicator());}
           if(snapshot.hasError){return Text("something went wrong");}
           var newsList=snapshot.data?.articles??[];

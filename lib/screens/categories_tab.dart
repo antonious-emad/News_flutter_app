@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../models/category_model.dart';
 import 'category_item.dart';
 
@@ -18,9 +18,9 @@ class CategoriesTab extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Text("Pick  your  category  of  interest",style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w700,color: Color(0xFF4F5A69)),),
+          child: Text(AppLocalizations.of(context)!.title,style: GoogleFonts.poppins(fontSize: 22,fontWeight: FontWeight.w700,color: Color(0xFF4F5A69)),),
         ),
-        Spacer(flex:1 ,),
+
         Expanded(
           child: Expanded(
             flex: 25,

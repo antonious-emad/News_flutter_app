@@ -4,7 +4,7 @@ import '../tab_controller_widget.dart';
 
 class NewsTab extends StatelessWidget {
   String CategoryId;
-   NewsTab(this.CategoryId,{super.key});
+  NewsTab(this.CategoryId,{super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DrawerTab extends StatelessWidget {
   Function onClick;
@@ -32,7 +33,10 @@ class DrawerTab extends StatelessWidget {
                   children: [
                     Icon(Icons.list,color: Color(0xff303030,),size: 45),
                     SizedBox(width: 10,),
-                    Text("Categories",style: GoogleFonts.poppins(fontWeight: FontWeight.w700,fontSize: 24,color:Color(0xff303030,)),),
+                    Text(
+                      //"Categories",
+                      AppLocalizations.of(context)!.category,
+                      style: GoogleFonts.poppins(fontWeight: FontWeight.w700,fontSize: 24,color:Color(0xff303030,)),),
                   ],
                 ),
               ),
@@ -47,7 +51,7 @@ class DrawerTab extends StatelessWidget {
                   children: [
                     Icon(Icons.settings,color:Color(0xff303030,),size: 45),
                     SizedBox(width: 10,),
-                    Text("Settings",style: GoogleFonts.poppins(fontWeight: FontWeight.w700,fontSize: 24,color:Color(0xff303030,)),),
+                    Text(AppLocalizations.of(context)!.settings,style: GoogleFonts.poppins(fontWeight: FontWeight.w700,fontSize: 24,color:Color(0xff303030,)),),
                   ],
                 ),
               ),
